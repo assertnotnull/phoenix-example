@@ -1,0 +1,10 @@
+version: '3.4'
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DATABASE: phoenix_example_dev
+    ports:
+      - '5432:5432'
