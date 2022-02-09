@@ -9,3 +9,21 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+
+alias PhoenixExample.Accounts
+
+[
+  %{
+    email: "test@test.com",
+    password: "test12345678",
+    name: "Patrice",
+    age: 38
+  },
+  %{
+    email: "test2@test.com",
+    password: "test12345678",
+    name: "Gus",
+    age: 34
+  }
+]
+|> Enum.each(&Accounts.register_user/1)

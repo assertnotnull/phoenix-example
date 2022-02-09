@@ -89,4 +89,9 @@ defmodule PhoenixExampleWeb.Router do
     get "/users/confirm/:token", UserConfirmationController, :edit
     post "/users/confirm/:token", UserConfirmationController, :update
   end
+
+  scope "/api", PhoenixExampleWeb do
+    pipe_through [:api]
+    get "/users/", UserController, :index
+  end
 end
