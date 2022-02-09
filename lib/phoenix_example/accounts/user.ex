@@ -7,6 +7,8 @@ defmodule PhoenixExample.Accounts.User do
     field :password, :string, virtual: true, redact: true
     field :hashed_password, :string, redact: true
     field :confirmed_at, :naive_datetime
+    field :name, :string
+    field :age, :integer
 
     timestamps()
   end
